@@ -1,0 +1,66 @@
+.navContainer{
+    height: 50px;
+    width: 100%;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;    
+    display: flex;
+    justify-content: center;
+
+    .navWrapper{
+        width: 100%;
+        padding: 0px 15px;
+        max-width: 1024px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width:768px){
+            padding: 0px 5px;
+        }
+
+        .logo{
+            font-weight: 700;
+            font-size: 24px;
+            color: orange;
+
+            @media screen and (max-width:768px){
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        .navItems{
+            .navButton{
+                border-radius: 10px;
+                margin-right: 20px;
+                font-weight: 500;
+                letter-spacing: 1.1px;
+                border: none;
+                padding: 5px 15px;
+                cursor: pointer;
+                background-color: #4747fc;
+                color: white;
+                font-weight: 400;
+
+                @media screen and (max-width:768px){
+                    margin: 0px 3px;
+                    padding: 5px 10px;
+                    font-weight: 400;
+                }
+            }
+
+            .userName{
+                padding: 5px 15px;
+                background-color: #0b0b9c;
+                color: white;
+                border-radius: 10px;
+                font-weight: 500;
+                letter-spacing: 1.1px;
+                font-weight: 600;
+                box-shadow: 0px 0px 10px #4747fc;
+                backdrop-filter: blur(15px);
+            }
+        }
+    }
+}

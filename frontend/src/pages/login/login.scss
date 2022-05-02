@@ -1,0 +1,80 @@
+.logContainer{
+    width: 100vw;
+    height: 100vh;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logWrapper{
+        width: 35%;
+        height: max-content;
+        padding: 20px;
+        border-radius: 10px;
+        background: #7baef436;
+        box-shadow: 0 0 25px rgba(0,0,0,0.4);
+        backdrop-filter: blur(15px);
+        border: 2px solid #febb02;
+
+        @media screen and(max-width:768px){
+            width: 90%;
+        }
+
+        .title{
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            input{
+                flex: 1;
+                width: 100%;
+                margin: 10px 0px;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 15px;
+                letter-spacing: 1.1px;
+                border: none;
+                outline: none;
+            }
+
+            .btn{
+                width: 40%;
+                border: none;
+                padding: 15px 20px;
+                border-radius: 10px;
+                background-color: #4747fc;
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1.1px;
+                cursor: pointer;
+            }
+
+            .err{
+                font-size: 15px;
+                color: rgb(212, 40, 40);
+            }
+
+            .forPass{
+                cursor: not-allowed;
+                font-size: 14px;
+                text-align: center;
+            }
+            
+            .forReg{
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+}
