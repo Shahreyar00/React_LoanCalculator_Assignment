@@ -24,6 +24,7 @@
             @media screen and (max-width:768px){
                 flex-direction: column;
                 width: 95%;
+                gap: 20px;
             }
 
             .wrapperLeft{
@@ -75,8 +76,9 @@
                 text-align: center;
                 
                 .temp{
-                    font-size: 20px;
+                    font-size: 18px;
                     letter-spacing: 1.1px;
+                    word-wrap: wrap;
                     color: #4747fc;
                 }
             }

@@ -3,7 +3,29 @@
     background-size: cover;
     background-position: bottom;
     transition: 0.4 ease;
+    position: relative;
 
+    &.warm{
+        background-image: url('./assets/warm-bg.jpg');
+    }
+    
+    .iconWeather{
+        width: 100%;
+        position: absolute;
+        top: 120px;
+        height: max-content;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        span{
+            font-size: 34px;
+            color: white;
+        }
+    }
+    
 
     main{
         height: calc(100vh - 50px);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./home.scss";
 import Navbar from '../../components/navbar/Navbar';
 import { FaGithub, FaLinkedinIn  } from "react-icons/fa";
@@ -8,6 +8,14 @@ import useGeolocation from '../../hooks/useGeolocation';
 
 const Home = () => {
     const location = useGeolocation();
+
+    const [lat, setLat] = useState("");
+    const [lon, setLon] = useState("");
+
+    useEffect(()=>{
+        setLat(JSON.stringify(location.coordinates.latitude));
+        setLon(JSON.stringify(location.coordinates.longitude));
+    },[location.loaded]);
 
     return (
         <div className="homeContainer">
@@ -51,7 +59,7 @@ const Home = () => {
                     <div className="wrapperRight">
                         <span className="temp">
                             {location.loaded
-                                ? JSON.stringify(location)
+                                ? `Latitude=${lat} Longitude=${lon}`
                                 :"Location data not available"
                             }
                         </span>

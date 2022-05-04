@@ -32,14 +32,16 @@ const Navbar = () => {
                             </Link>
                         </>
                     ) : ( 
-                        <button className="navButton" onClick={handleLogout}>
-                            Logout 
-                        </button>
+                        <>
+                            <button className="navButton" onClick={handleLogout}>
+                                Logout 
+                            </button>
+                            {cUser?(<span className="userName">Welcome {(cUser.username).slice(0,12)}</span>):(<span className="userName">Please Login</span>)}
+                        </>
                     ) 
                         
                     }
 
-                    {cUser?(<span className="userName">Welcome {(cUser.username).slice(0,12)}</span>):(<span className="userName">Please Login</span>)}
                 </div>
             </div>
         </div>
